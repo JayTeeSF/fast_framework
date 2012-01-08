@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+options = []
+options += ["-p", "3000"] unless ARGV.include?('-p')
+options += ARGV
+exec "rackup fast_framework.ru #{options.join(' ')}"
